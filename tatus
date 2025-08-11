@@ -1,0 +1,5 @@
+[33mf8d695a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Remove vercel.json to use auto-detection
+[33m205429a[m Simplify vercel.json to avoid configuration conflicts
+[33mdee6ca8[m Fix vercel.json syntax for new Vercel format
+[33m3d354d7[m Add Railway and Vercel configuration files for deployment
+[33md0afc39[m Add render.yaml configuration for PHP and React deployment
