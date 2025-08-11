@@ -32,7 +32,7 @@ import apiService from '../services/api';
 import toast from 'react-hot-toast';
 import OrdersManagement from '../components/vendor/OrdersManagement';
 import RestaurantInfoManager from '../components/vendor/RestaurantInfoManager';
-import AnalyticsDashboard from '../components/vendor/AnalyticsDashboard';
+
 
 // Fonction pour basculer la disponibilité d'un plat
 const toggleDishAvailability = async (dishId: number, currentAvailability: boolean) => {
@@ -620,8 +620,17 @@ export default function VendorDashboardPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
+              className="p-6"
             >
-              <AnalyticsDashboard />
+              <div className="text-center py-12">
+                <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Tableau de bord analytique
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Les analyses détaillées seront bientôt disponibles.
+                </p>
+              </div>
             </motion.div>
           )}
 
