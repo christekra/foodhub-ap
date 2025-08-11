@@ -1,6 +1,6 @@
 [build]
   base = "foodhub-frontend"
-  command = "npm ci && npm run build"
+  command = "chmod +x build.sh && ./build.sh"
   publish = "build"
 
 [build.environment]
