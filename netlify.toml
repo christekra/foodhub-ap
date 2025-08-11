@@ -1,6 +1,6 @@
 [build]
   base = "foodhub-frontend"
-  command = "npm install && npm run build"
+  command = "npm install"
   publish = "build"
 
 [build.environment]
