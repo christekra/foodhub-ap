@@ -31,7 +31,7 @@ import { useAuth } from '../contexts/AuthContext';
 import apiService from '../services/api';
 import toast from 'react-hot-toast';
 import OrdersManagement from '../components/vendor/OrdersManagement';
-import RestaurantInfoManager from '../components/vendor/RestaurantInfoManager';
+
 
 
 // Fonction pour basculer la disponibilité d'un plat
@@ -640,8 +640,17 @@ export default function VendorDashboardPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
+              className="p-6"
             >
-              <RestaurantInfoManager />
+              <div className="text-center py-12">
+                <Store className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Gestion du profil restaurant
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  La gestion du profil restaurant sera bientôt disponible.
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
