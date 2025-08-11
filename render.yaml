@@ -1,0 +1,70 @@
+services:
+  # Backend Laravel
+  - type: web
+    name: foodhub-backend
+    env: php
+    plan: free
+    buildCommand: composer install --optimize-autoloader --no-dev
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    rootDir: foodhub-backend
+    envVars:
+      - key: APP_NAME
+        value: FoodHub
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        value: base64:6Im8QATEnU6c6Db2RVhAQ+VhvcpG2BDNq3lFGcyKPKQ=
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: foodhub-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: foodhub-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: foodhub-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: foodhub-db
+          property: username
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: foodhub-db
+          property: password
+      - key: CACHE_DRIVER
+        value: file
+      - key: SESSION_DRIVER
+        value: file
+      - key: QUEUE_CONNECTION
+        value: sync
+
+  # Frontend React
+  - type: web
+    name: foodhub-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    rootDir: foodhub-frontend
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://foodhub-backend.onrender.com/api
+      - key: REACT_APP_GOOGLE_MAPS_API_KEY
+        value: votre_cle_google_maps
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  - name: foodhub-db
+    plan: free
+    databaseName: foodhub
+    user: foodhub_user
