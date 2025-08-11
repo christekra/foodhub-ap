@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: foodhub-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://votre-backend.onrender.com/api
+      - key: REACT_APP_GOOGLE_MAPS_API_KEY
+        value: votre_cle_google_maps
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
