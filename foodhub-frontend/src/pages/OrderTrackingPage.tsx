@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+
 import { 
   ArrowLeft, 
   Clock, 
@@ -256,11 +256,11 @@ export default function OrderTrackingPage() {
                   const IconComponent = step.icon;
 
                   return (
-                    <motion.div
+                    <div
                       key={step.status}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      }
+                      }
+                      }
                       className={`flex items-start space-x-4 ${
                         isCompleted ? 'opacity-100' : 'opacity-50'
                       }`}
@@ -289,7 +289,7 @@ export default function OrderTrackingPage() {
                           </p>
                         )}
                       </div>
-                    </motion.div>
+                    </div>
                   );
                 })}
               </div>

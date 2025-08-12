@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnimatePresence } from 'framer-motion';
+
 import ChatWidget from './ChatWidget';
 import ChatButton from './ChatButton';
 import { useChat } from '../hooks/useChat';
@@ -9,7 +9,7 @@ const ChatSystem: React.FC = () => {
 
   return (
     <>
-      <AnimatePresence>
+      <div>
         {!isChatOpen && (
           <ChatButton
             onClick={toggleChat}
@@ -17,7 +17,7 @@ const ChatSystem: React.FC = () => {
             isActive={false}
           />
         )}
-      </AnimatePresence>
+      </div>
       
       <ChatWidget
         isOpen={isChatOpen}
@@ -28,3 +28,4 @@ const ChatSystem: React.FC = () => {
 };
 
 export default ChatSystem;
+

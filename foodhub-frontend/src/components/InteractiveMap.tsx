@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { MapPin, Navigation, Clock } from 'lucide-react';
 
 interface Location {
@@ -61,9 +61,9 @@ export default function InteractiveMap({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
+      }
+      }
       className={`rounded-lg overflow-hidden shadow-lg ${className}`}
       style={{ height }}
     >
@@ -160,6 +160,7 @@ export default function InteractiveMap({
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
+

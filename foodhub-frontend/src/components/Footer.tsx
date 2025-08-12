@@ -12,13 +12,13 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <motion.div
-                initial={{ scale: 1 }}
+              <div
+                }
                 whileHover={{ scale: 1.1 }}
                 className="w-8 h-8 bg-gradient-to-br from-orange-500 to-green-600 rounded-lg flex items-center justify-center"
               >
                 <span className="text-white text-sm font-bold">🍽️</span>
-              </motion.div>
+              </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent">
                   FoodHub CI
@@ -150,3 +150,4 @@ export default function Footer() {
     </footer>
   )
 }
+

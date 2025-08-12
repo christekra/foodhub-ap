@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { MapPin, Navigation, Search, AlertCircle, CheckCircle } from 'lucide-react';
 import { useGeolocation } from '../hooks/useGeolocation';
 import InteractiveMap from './InteractiveMap';
@@ -147,10 +147,10 @@ export default function AddressSelector({
 
       {/* Carte interactive */}
       {isMapVisible && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+        <div
+          }
+          }
+          }
           className="overflow-hidden"
         >
           <InteractiveMap
@@ -168,8 +168,9 @@ export default function AddressSelector({
               Coordonnées: {coordinates.latitude.toFixed(6)}, {coordinates.longitude.toFixed(6)}
             </div>
           )}
-        </motion.div>
+        </div>
       )}
     </div>
   );
 }
+

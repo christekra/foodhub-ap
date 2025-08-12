@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -30,11 +29,7 @@ export default function VendorDashboardPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
-          >
+          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center">
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
               <User className="w-12 h-12 text-gray-400" />
             </div>
@@ -50,7 +45,7 @@ export default function VendorDashboardPage() {
             >
               Se connecter
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -60,11 +55,7 @@ export default function VendorDashboardPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
-          >
+          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center">
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertCircle className="w-12 h-12 text-gray-400" />
             </div>
@@ -80,7 +71,7 @@ export default function VendorDashboardPage() {
             >
               Retour à l'accueil
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -90,11 +81,7 @@ export default function VendorDashboardPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-7xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
-        >
+        <div className="mb-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <button
@@ -115,17 +102,12 @@ export default function VendorDashboardPage() {
             
             
           </div>
-        </motion.div>
+        </div>
 
 
 
         {/* Onglets */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg mb-8"
-        >
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg mb-8">
           <div className="flex border-b border-gray-200 dark:border-slate-700">
             <button
               onClick={() => setActiveTab('orders')}
@@ -172,18 +154,12 @@ export default function VendorDashboardPage() {
               Mon Profil
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Contenu des onglets */}
-        <AnimatePresence mode="wait">
+        <div>
           {activeTab === 'orders' && (
-            <motion.div
-              key="orders"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-6"
-            >
+            <div className="p-6">
               <div className="text-center py-12">
                 <ShoppingBag className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -193,17 +169,11 @@ export default function VendorDashboardPage() {
                   La gestion des commandes sera bientôt disponible.
                 </p>
               </div>
-            </motion.div>
+            </div>
           )}
 
                     {activeTab === 'dishes' && (
-            <motion.div
-              key="dishes"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-6"
-            >
+            <div className="p-6">
               <div className="text-center py-12">
                 <Package className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -213,17 +183,11 @@ export default function VendorDashboardPage() {
                   La gestion des plats sera bientôt disponible.
                 </p>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'analytics' && (
-            <motion.div
-              key="analytics"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-6"
-            >
+            <div className="p-6">
               <div className="text-center py-12">
                 <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -233,17 +197,11 @@ export default function VendorDashboardPage() {
                   Les analyses détaillées seront bientôt disponibles.
                 </p>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'restaurant' && (
-            <motion.div
-              key="restaurant"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="p-6"
-            >
+            <div className="p-6">
               <div className="text-center py-12">
                 <Store className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
@@ -253,10 +211,11 @@ export default function VendorDashboardPage() {
                   La gestion du profil restaurant sera bientôt disponible.
                 </p>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
       </div>
     </div>
   );
 } 
+

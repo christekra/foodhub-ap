@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -181,9 +181,9 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -201,7 +201,7 @@ export default function CheckoutPage() {
             >
               Découvrir nos plats
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -212,9 +212,9 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -248,7 +248,7 @@ export default function CheckoutPage() {
                 Redirection automatique dans quelques secondes...
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -258,9 +258,9 @@ export default function CheckoutPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="mb-8"
         >
           <div className="flex items-center space-x-4">
@@ -279,13 +279,13 @@ export default function CheckoutPage() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contenu principal */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+          <div 
+            }
+            }
             className="lg:col-span-2"
           >
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
@@ -309,14 +309,14 @@ export default function CheckoutPage() {
                 ))}
               </div>
 
-              <AnimatePresence mode="wait">
+              <div mode="wait">
                 {/* Étape 1: Informations de livraison */}
                 {currentStep === 1 && (
-                  <motion.div
+                  <div
                     key="step1"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    }
+                    }
+                    }
                     className="space-y-6"
                   >
                     <div>
@@ -422,16 +422,16 @@ export default function CheckoutPage() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Étape 2: Méthode de paiement */}
                 {currentStep === 2 && (
-                  <motion.div
+                  <div
                     key="step2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    }
+                    }
+                    }
                     className="space-y-6"
                   >
                     <div>
@@ -475,16 +475,16 @@ export default function CheckoutPage() {
                         ))}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Étape 3: Confirmation */}
                 {currentStep === 3 && (
-                  <motion.div
+                  <div
                     key="step3"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
+                    }
+                    }
+                    }
                     className="space-y-6"
                   >
                     <div>
@@ -534,9 +534,9 @@ export default function CheckoutPage() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
+              </div>
 
               {/* Boutons de navigation */}
               <div className="flex justify-between mt-8 pt-6 border-t border-gray-200 dark:border-slate-700">
@@ -591,12 +591,12 @@ export default function CheckoutPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Résumé de commande */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+          <div 
+            }
+            }
             className="lg:col-span-1"
           >
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 sticky top-8">
@@ -666,9 +666,10 @@ export default function CheckoutPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
   );
 } 
+

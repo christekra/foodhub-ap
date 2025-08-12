@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import toast from 'react-hot-toast';
@@ -242,16 +242,16 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Logo et titre animés */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          }
+          }
           className="text-center mb-8"
         >
           <Link to="/" className="inline-block">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            <div
+              }
+              }
+              }
               className="w-16 h-16 bg-gradient-to-br from-orange-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
             >
               <motion.span
@@ -268,30 +268,30 @@ export default function LoginPage() {
               >
                 🍽️
               </motion.span>
-            </motion.div>
+            </div>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              }
+              }
+              }
               className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent mb-2"
             >
               FoodHub CI
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              }
+              }
+              }
               className="text-gray-600 dark:text-gray-400"
             >
               {isLogin ? 'Connectez-vous à votre compte' : 'Créez votre compte'}
             </motion.p>
           </Link>
-        </motion.div>
+        </div>
 
         {/* Toggle Login/Register */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          }
+          }
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-6"
         >
           <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1 mb-6">
@@ -317,14 +317,14 @@ export default function LoginPage() {
             </button>
           </div>
 
-          <AnimatePresence mode="wait">
+          <div mode="wait">
             {isLogin ? (
               <motion.form
                 key="login"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
+                }
+                }
+                }
+                }
                 onSubmit={handleLogin}
                 className="space-y-4"
               >
@@ -434,10 +434,10 @@ export default function LoginPage() {
             ) : (
               <motion.form
                 key="register"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.3 }}
+                }
+                }
+                }
+                }
                 onSubmit={handleRegister}
                 className="space-y-4"
               >
@@ -474,14 +474,14 @@ export default function LoginPage() {
                   </div>
                 </div>
 
-                <AnimatePresence mode="wait">
+                <div mode="wait">
                   {registerForm.accountType === 'client' ? (
-                    <motion.div
+                    <div
                       key="client-form"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      }
+                      }
+                      }
+                      }
                       className="space-y-4"
                     >
                       {/* Name Fields */}
@@ -564,14 +564,14 @@ export default function LoginPage() {
                           </div>
                         )}
                       </div>
-                    </motion.div>
+                    </div>
                   ) : (
-                    <motion.div
+                    <div
                       key="vendor-form"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      }
+                      }
+                      }
+                      }
                       className="space-y-4"
                     >
                       {/* Restaurant Name */}
@@ -657,9 +657,9 @@ export default function LoginPage() {
                           </div>
                         )}
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
+                </div>
 
                 {/* Common Fields */}
                 <div className="space-y-4">
@@ -808,14 +808,14 @@ export default function LoginPage() {
                 </motion.button>
               </motion.form>
             )}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Footer Links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+        <div
+          }
+          }
+          }
           className="text-center"
         >
           <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -827,8 +827,9 @@ export default function LoginPage() {
               {isLogin ? "S'inscrire" : "Se connecter"}
             </button>
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 } 
+

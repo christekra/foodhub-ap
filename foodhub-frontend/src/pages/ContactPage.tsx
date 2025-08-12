@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Phone, 
   Mail, 
@@ -119,10 +119,10 @@ const ContactPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            }
+            }
+            }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -135,7 +135,7 @@ const ContactPage: React.FC = () => {
               Notre équipe est là pour vous aider. N'hésitez pas à nous contacter pour toute question, 
               suggestion ou problème technique.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -144,11 +144,11 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
+                }
+                }
                 className="text-center p-6 bg-gradient-to-br from-orange-50 to-green-50 rounded-xl hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex justify-center mb-4">
@@ -163,7 +163,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">
                   {info.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -172,10 +172,10 @@ const ContactPage: React.FC = () => {
       {/* Contact Form Section */}
       <section className="py-20 bg-gradient-to-r from-orange-50 to-green-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -184,12 +184,12 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-600">
               Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            }
             className="bg-white rounded-2xl shadow-xl p-8"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -302,17 +302,17 @@ const ContactPage: React.FC = () => {
                 </motion.button>
               </div>
             </form>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -321,15 +321,15 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-600">
               Trouvez rapidement des réponses à vos questions les plus courantes.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
                 className="bg-gradient-to-r from-orange-50 to-green-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
@@ -339,7 +339,7 @@ const ContactPage: React.FC = () => {
                 <p className="text-gray-600">
                   {faq.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -348,10 +348,10 @@ const ContactPage: React.FC = () => {
       {/* Map Section */}
       <section className="py-20 bg-gradient-to-r from-orange-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -360,12 +360,12 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-600">
               Venez nous rendre visite à notre siège social à Abidjan.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            }
             className="bg-white rounded-2xl shadow-xl overflow-hidden"
           >
             <div className="h-96 bg-gradient-to-br from-orange-100 to-green-100 flex items-center justify-center">
@@ -382,17 +382,17 @@ const ContactPage: React.FC = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Besoin d'aide immédiate ?
@@ -418,7 +418,7 @@ const ContactPage: React.FC = () => {
                 Chat en ligne
               </motion.button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -426,3 +426,4 @@ const ContactPage: React.FC = () => {
 };
 
 export default ContactPage;
+

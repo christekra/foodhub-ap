@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Users, Store, Package, DollarSign, AlertTriangle, Shield, XCircle, BarChart3, RefreshCw, Star, MessageSquare, Tag, ShoppingCart } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -44,9 +44,9 @@ export default function AdminDashboardPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -64,7 +64,7 @@ export default function AdminDashboardPage() {
             >
               Se connecter
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -74,9 +74,9 @@ export default function AdminDashboardPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -94,7 +94,7 @@ export default function AdminDashboardPage() {
             >
               Retour à l'accueil
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -104,9 +104,9 @@ export default function AdminDashboardPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-7xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -137,14 +137,14 @@ export default function AdminDashboardPage() {
               <RefreshCw className={`w-5 h-5 ${loading ? 'animate-spin' : ''}`} />
             </motion.button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Statistiques générales */}
         {stats && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <div
+            }
+            }
+            }
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           >
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
@@ -194,15 +194,15 @@ export default function AdminDashboardPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Alertes en attente */}
         {stats && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <div
+            }
+            }
+            }
             className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
           >
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border-l-4 border-yellow-500">
@@ -234,14 +234,14 @@ export default function AdminDashboardPage() {
                 <MessageSquare className="w-6 h-6 text-red-500" />
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Onglets */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+        <div
+          }
+          }
+          }
           className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg mb-8"
         >
           <div className="flex border-b border-gray-200 dark:border-slate-700 overflow-x-auto">
@@ -334,16 +334,16 @@ export default function AdminDashboardPage() {
               Chat Support
             </button>
           </div>
-        </motion.div>
+        </div>
 
         {/* Contenu des onglets */}
-        <AnimatePresence mode="wait">
+        <div mode="wait">
           {activeTab === 'overview' && (
-            <motion.div
+            <div
               key="overview"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
@@ -396,106 +396,107 @@ export default function AdminDashboardPage() {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'users' && (
-            <motion.div
+            <div
               key="users"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <UsersTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'vendor-applications' && (
-            <motion.div
+            <div
               key="vendor-applications"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <VendorApplicationsTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'dish-applications' && (
-            <motion.div
+            <div
               key="dish-applications"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <DishApplicationsTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'review-applications' && (
-            <motion.div
+            <div
               key="review-applications"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <ReviewApplicationsTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'categories' && (
-            <motion.div
+            <div
               key="categories"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <CategoriesTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'orders' && (
-            <motion.div
+            <div
               key="orders"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <OrdersTab onRefresh={loadDashboardData} />
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'chat' && (
-            <motion.div
+            <div
               key="chat"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              }
+              }
+              }
               className="space-y-6"
             >
               <ChatManagementTab />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
       </div>
     </div>
   );
 } 
+

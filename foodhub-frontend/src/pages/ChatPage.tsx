@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Send, 
   User, 
@@ -174,9 +174,9 @@ const ChatPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="max-w-4xl mx-auto p-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          }
+          }
           className="bg-white rounded-lg shadow-lg overflow-hidden"
         >
           {/* Header */}
@@ -206,10 +206,10 @@ const ChatPage: React.FC = () => {
           {/* Messages */}
           <div className="h-96 overflow-y-auto p-6 space-y-4">
             {messages.map((message) => (
-              <motion.div
+              <div
                 key={message.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                }
+                }
                 className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div className={`flex items-end space-x-3 max-w-md ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
@@ -246,13 +246,13 @@ const ChatPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
             
             {isTyping && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+              <div
+                }
+                }
                 className="flex justify-start"
               >
                 <div className="flex items-end space-x-3">
@@ -267,7 +267,7 @@ const ChatPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
             
             <div ref={messagesEndRef} />
@@ -333,10 +333,11 @@ const ChatPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ChatPage;
+

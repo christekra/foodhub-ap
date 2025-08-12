@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { MessageCircle, Bell } from 'lucide-react';
 
 interface ChatButtonProps {
@@ -10,9 +10,9 @@ interface ChatButtonProps {
 
 const ChatButton: React.FC<ChatButtonProps> = ({ onClick, unreadCount, isActive = false }) => {
   return (
-    <motion.div
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+    <div
+      }
+      }
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       className="fixed bottom-4 right-4 z-50"
@@ -25,28 +25,29 @@ const ChatButton: React.FC<ChatButtonProps> = ({ onClick, unreadCount, isActive 
             : 'bg-orange-500 hover:bg-orange-600 text-white'
         }`}
       >
-        <AnimatePresence>
+        <div>
           {unreadCount > 0 && (
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0, opacity: 0 }}
+            <div
+              }
+              }
+              }
               className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold"
             >
               {unreadCount > 99 ? '99+' : unreadCount}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
         
-        <motion.div
-          animate={unreadCount > 0 ? { rotate: [0, -10, 10, 0] } : {}}
-          transition={{ duration: 0.5, repeat: unreadCount > 0 ? Infinity : 0, repeatDelay: 2 }}
+        <div
+           : {}}
+          }
         >
           {unreadCount > 0 ? <Bell className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-        </motion.div>
+        </div>
       </button>
-    </motion.div>
+    </div>
   );
 };
 
 export default ChatButton;
+

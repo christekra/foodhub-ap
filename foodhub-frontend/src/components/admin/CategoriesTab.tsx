@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { Tag, Plus, Edit, Trash2, RefreshCw, Package } from 'lucide-react';
 import apiService from '../../services/api';
 import toast from 'react-hot-toast';
@@ -153,10 +153,10 @@ export default function CategoriesTab({ onRefresh }: Props) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => (
-            <motion.div
+            <div
               key={category.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              }
+              }
               className="bg-gray-50 dark:bg-slate-700 rounded-xl p-6"
             >
               <div className="flex items-center justify-between mb-4">
@@ -202,7 +202,7 @@ export default function CategoriesTab({ onRefresh }: Props) {
                   <span>Supprimer</span>
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

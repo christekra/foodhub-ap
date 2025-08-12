@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -186,16 +186,16 @@ export default function RegisterPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
         <div className="w-full max-w-md">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            }
+            }
             className="text-center mb-8"
           >
                       <Link to="/" className="inline-block">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            <div
+              }
+              }
+              }
               className="w-16 h-16 bg-gradient-to-br from-orange-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
             >
               <motion.span
@@ -212,21 +212,21 @@ export default function RegisterPage() {
               >
                 🍽️
               </motion.span>
-            </motion.div>
+            </div>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              }
+              }
+              }
               className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent mb-2"
             >
               FoodHub CI
             </motion.h1>
           </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            }
+            }
             className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center"
           >
             <div className="flex justify-center mb-6">
@@ -260,7 +260,7 @@ export default function RegisterPage() {
                 Retour à l'accueil
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -270,16 +270,16 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       <div className="w-full max-w-2xl">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          }
+          }
           className="text-center mb-8"
         >
           <Link to="/" className="inline-block">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            <div
+              }
+              }
+              }
               className="w-20 h-20 bg-gradient-to-br from-orange-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"
             >
               <motion.span
@@ -296,11 +296,11 @@ export default function RegisterPage() {
               >
                 🍽️
               </motion.span>
-            </motion.div>
+            </div>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              }
+              }
+              }
               className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent mb-2"
             >
               FoodHub CI
@@ -309,11 +309,11 @@ export default function RegisterPage() {
           <p className="text-gray-600 dark:text-gray-400 text-lg">
             Rejoignez notre communauté
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          }
+          }
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -713,8 +713,9 @@ export default function RegisterPage() {
               </p>
             </div>
           </form>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
 } 
+

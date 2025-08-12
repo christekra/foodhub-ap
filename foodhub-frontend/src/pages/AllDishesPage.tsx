@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search, 
   Filter, 
@@ -204,9 +204,9 @@ export default function AllDishesPage() {
 
   if (dishes.length === 0) {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <div
+        }
+        }
         className="text-center py-12"
       >
         <div className="text-gray-400 dark:text-gray-600 text-6xl mb-4">🍽️</div>
@@ -216,7 +216,7 @@ export default function AllDishesPage() {
         <p className="text-gray-600 dark:text-gray-400">
           Essayez de modifier vos critères de recherche
         </p>
-      </motion.div>
+      </div>
     );
   }
 
@@ -288,12 +288,12 @@ export default function AllDishesPage() {
           </div>
 
                      {/* Filtres avancés améliorés */}
-           <AnimatePresence>
+           <div>
              {showFilters && (
-               <motion.div
-                 initial={{ opacity: 0, height: 0 }}
-                 animate={{ opacity: 1, height: 'auto' }}
-                 exit={{ opacity: 0, height: 0 }}
+               <div
+                 }
+                 }
+                 }
                                    className="mt-6 pt-6 border-t border-orange-300 dark:border-gray-700"
                >
                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -403,9 +403,9 @@ export default function AllDishesPage() {
                      ))}
                    </div>
                  </div>
-               </motion.div>
+               </div>
              )}
-           </AnimatePresence>
+           </div>
         </div>
       </div>
 
@@ -413,16 +413,16 @@ export default function AllDishesPage() {
        <div className="container mx-auto px-6 py-12">
          {/* En-tête amélioré */}
          <div className="mb-12 text-center">
-                       <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+                       <div
+              }
+              }
               className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-100 to-green-100 dark:from-gray-700 dark:to-gray-600 px-6 py-3 rounded-full border-2 border-orange-300 dark:border-gray-600 mb-6"
             >
              <span className="text-2xl">🍽️</span>
              <span className="text-sm font-semibold text-orange-800 dark:text-orange-200">
                {filteredDishes.length} plat{filteredDishes.length > 1 ? 's' : ''} trouvé{filteredDishes.length > 1 ? 's' : ''}
              </span>
-           </motion.div>
+           </div>
                        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-600 via-green-600 to-orange-600 bg-clip-text text-transparent mb-4">
              Découvrez nos délicieux plats
            </h1>
@@ -436,14 +436,14 @@ export default function AllDishesPage() {
            ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'
            : 'space-y-6'
          }>
-           <AnimatePresence>
+           <div>
              {filteredDishes.map((dish, index) => (
-                               <motion.div
+                               <div
                   key={dish.id}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  }
+                  }
+                  }
+                  }
                   className={`group bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-orange-200 dark:border-gray-700 flex flex-col ${
                     viewMode === 'list' ? 'flex-row' : ''
                   }`}
@@ -470,8 +470,8 @@ export default function AllDishesPage() {
                    <div className="absolute top-4 left-4 flex flex-col gap-2">
                      {dish.is_featured && (
                        <motion.span 
-                         initial={{ scale: 0 }}
-                         animate={{ scale: 1 }}
+                         }
+                         }
                          className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg border border-white/20"
                        >
                          ⭐ Populaire
@@ -479,9 +479,9 @@ export default function AllDishesPage() {
                      )}
                      {dish.is_available && (
                        <motion.span 
-                         initial={{ scale: 0 }}
-                         animate={{ scale: 1 }}
-                         transition={{ delay: 0.1 }}
+                         }
+                         }
+                         }
                          className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-lg border border-white/20"
                        >
                          ✅ Disponible
@@ -585,16 +585,16 @@ export default function AllDishesPage() {
                       </motion.button>
                     </div>
                   </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
+          </div>
         </div>
 
                  {/* Message si aucun résultat amélioré */}
          {filteredDishes.length === 0 && (
-           <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
+           <div
+             }
+             }
              className="text-center py-20"
            >
                            <div className="bg-gradient-to-r from-orange-100 to-green-100 dark:from-gray-700 dark:to-gray-600 w-32 h-32 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl">
@@ -618,7 +618,7 @@ export default function AllDishesPage() {
              >
                🔄 Réinitialiser les filtres
              </motion.button>
-           </motion.div>
+           </div>
          )}
       </div>
 

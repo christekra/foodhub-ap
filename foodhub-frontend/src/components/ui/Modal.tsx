@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { X } from 'lucide-react';
 
 interface ModalProps {
@@ -92,9 +92,9 @@ export const Modal: React.FC<ModalProps> = ({
   }, [isOpen, onClose]);
 
   return (
-    <AnimatePresence>
+    <div>
       {isOpen && (
-        <motion.div
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           variants={backdropVariants}
           initial="hidden"
@@ -106,7 +106,7 @@ export const Modal: React.FC<ModalProps> = ({
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
           
           {/* Modal */}
-          <motion.div
+          <div
             className={`relative bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full ${getModalSize(
               size
             )} max-h-[90vh] overflow-hidden`}
@@ -141,10 +141,10 @@ export const Modal: React.FC<ModalProps> = ({
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
               {children}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

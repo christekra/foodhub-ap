@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { useCart } from '../contexts/CartContext';
 
 interface CartItem {
@@ -166,10 +166,10 @@ export default function TestCartContext() {
           ) : (
             <div className="space-y-4">
               {cartItems.map((item: CartItem) => (
-                <motion.div
+                <div
                   key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  }
+                  }
                   className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
                 >
                   <div className="flex items-center space-x-4">
@@ -195,7 +195,7 @@ export default function TestCartContext() {
                       </div>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           )}

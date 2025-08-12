@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   MessageCircle, 
   X, 
@@ -184,9 +184,9 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
 
   if (!isOpen) {
     return (
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+      <div
+        }
+        }
         className="fixed bottom-4 right-4 z-50"
       >
         <button
@@ -195,16 +195,16 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
         >
           <MessageCircle className="w-6 h-6" />
         </button>
-      </motion.div>
+      </div>
     );
   }
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 20, scale: 0.9 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: 20, scale: 0.9 }}
+    <div>
+      <div
+        }
+        }
+        }
         className="fixed bottom-4 right-4 z-50 w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 flex flex-col"
       >
         {/* Header */}
@@ -234,10 +234,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {messages.map((message) => (
-                <motion.div
+                <div
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  }
+                  }
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`flex items-end space-x-2 max-w-xs ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
@@ -266,13 +266,13 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
               
               {isTyping && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                <div
+                  }
+                  }
                   className="flex justify-start"
                 >
                   <div className="flex items-end space-x-2">
@@ -287,7 +287,7 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
               
               <div ref={messagesEndRef} />
@@ -316,9 +316,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onToggle }) => {
             </div>
           </>
         )}
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 
 export default ChatWidget;
+

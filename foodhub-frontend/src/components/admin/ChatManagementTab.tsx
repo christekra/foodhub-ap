@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   MessageCircle, 
   Search, 
@@ -426,10 +426,10 @@ const ChatManagementTab: React.FC = () => {
               </div>
             ) : (
               filteredChats.map((chat) => (
-                <motion.div
+                <div
                   key={chat.session_id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  }
+                  }
                   onClick={() => handleChatSelect(chat)}
                   className={`p-3 rounded-lg cursor-pointer transition-all ${
                     selectedChat?.session_id === chat.session_id
@@ -469,7 +469,7 @@ const ChatManagementTab: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))
             )}
           </div>
@@ -506,10 +506,10 @@ const ChatManagementTab: React.FC = () => {
               {/* Messages */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {chatHistory.map((message) => (
-                  <motion.div
+                  <div
                     key={message.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    }
+                    }
                     className={`flex ${message.is_admin ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`flex items-end space-x-3 max-w-md ${message.is_admin ? 'flex-row-reverse space-x-reverse' : ''}`}>
@@ -538,7 +538,7 @@ const ChatManagementTab: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
                 <div ref={messagesEndRef} />
               </div>
@@ -586,3 +586,4 @@ const ChatManagementTab: React.FC = () => {
 };
 
 export default ChatManagementTab;
+

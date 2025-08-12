@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { MapPin, Navigation, Clock, Truck, AlertCircle } from 'lucide-react';
 import InteractiveMap from './InteractiveMap';
 

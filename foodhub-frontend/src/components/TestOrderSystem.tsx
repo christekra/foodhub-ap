@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import OrderStatusBadge from './OrderStatusBadge';
 import OrderStatusUpdater from './OrderStatusUpdater';
 import OrderNotification from './OrderNotification';

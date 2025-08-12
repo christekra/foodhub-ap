@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { Package, Store, DollarSign, Clock, RefreshCw, CheckCircle, XSquare, Eye } from 'lucide-react';
 import apiService from '../../services/api';
 import toast from 'react-hot-toast';
@@ -148,10 +148,10 @@ export default function DishApplicationsTab({ onRefresh }: Props) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {applications.map((application) => (
-            <motion.div
+            <div
               key={application.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              }
+              }
               className="bg-gray-50 dark:bg-slate-700 rounded-xl p-6"
             >
               <div className="flex items-center justify-between mb-4">
@@ -249,7 +249,7 @@ export default function DishApplicationsTab({ onRefresh }: Props) {
                   </p>
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

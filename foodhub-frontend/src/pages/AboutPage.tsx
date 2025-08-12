@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Heart, 
   Users, 
@@ -78,10 +78,10 @@ const AboutPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            }
+            }
+            }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -103,7 +103,7 @@ const AboutPage: React.FC = () => {
                 Découvrir notre histoire
               </motion.button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -112,11 +112,11 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
+                }
+                }
                 className="text-center"
               >
                 <div className="flex justify-center mb-4">
@@ -124,7 +124,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -133,10 +133,10 @@ const AboutPage: React.FC = () => {
       {/* Mission Section */}
       <section className="py-20 bg-gradient-to-r from-orange-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -146,15 +146,15 @@ const AboutPage: React.FC = () => {
               Révolutionner l'expérience de livraison de nourriture en Côte d'Ivoire en créant 
               une plateforme qui valorise la qualité, la rapidité et l'innovation technologique.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex justify-center mb-4">
@@ -166,7 +166,7 @@ const AboutPage: React.FC = () => {
                 <p className="text-gray-600 text-center">
                   {value.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -175,10 +175,10 @@ const AboutPage: React.FC = () => {
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -188,15 +188,15 @@ const AboutPage: React.FC = () => {
               Une équipe passionnée et expérimentée qui travaille chaque jour pour améliorer 
               votre expérience FoodHub.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
                 className="text-center group"
               >
                 <div className="relative mb-6">
@@ -215,7 +215,7 @@ const AboutPage: React.FC = () => {
                 <p className="text-gray-600 text-sm">
                   {member.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -224,16 +224,16 @@ const AboutPage: React.FC = () => {
       {/* Timeline Section */}
       <section className="py-20 bg-gradient-to-r from-orange-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Notre Histoire
             </h2>
-          </motion.div>
+          </div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-orange-200"></div>
@@ -266,11 +266,11 @@ const AboutPage: React.FC = () => {
                   description: 'FoodHub devient la plateforme de référence avec 10,000+ clients satisfaits.'
                 }
               ].map((milestone, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  }
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  }
                   className={`relative flex items-center ${
                     index % 2 === 0 ? 'justify-start' : 'justify-end'
                   }`}
@@ -290,7 +290,7 @@ const AboutPage: React.FC = () => {
                   </div>
                   
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full border-4 border-white shadow-lg"></div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -300,10 +300,10 @@ const AboutPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Rejoignez l'aventure FoodHub
@@ -328,7 +328,7 @@ const AboutPage: React.FC = () => {
                 Nous contacter
               </motion.button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -336,3 +336,4 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { Bell, X, CheckCircle, Clock, Truck, Package } from 'lucide-react';
 
 interface OrderNotificationProps {
@@ -45,12 +45,12 @@ export default function OrderNotification({
   const colorClass = statusColors[status as keyof typeof statusColors] || 'bg-gray-50 border-gray-200 text-gray-800';
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: -50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -50, scale: 0.9 }}
+        <div
+          }
+          }
+          }
           className={`fixed top-4 right-4 z-50 max-w-sm w-full p-4 rounded-lg border shadow-lg ${colorClass}`}
         >
           <div className="flex items-start space-x-3">
@@ -75,8 +75,8 @@ export default function OrderNotification({
               <X className="w-4 h-4" />
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 } 

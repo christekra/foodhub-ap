@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { ChevronDown, Check, X } from 'lucide-react';
 import apiService from '../services/api';
 import toast from 'react-hot-toast';
@@ -85,10 +85,10 @@ export default function OrderStatusUpdater({
       </div>
 
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
+        <div
+          }
+          }
+          }
           className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50"
         >
           <div className="p-4">
@@ -156,7 +156,7 @@ export default function OrderStatusUpdater({
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { useNavigate } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -169,9 +169,9 @@ export default function OrderHistoryPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -189,7 +189,7 @@ export default function OrderHistoryPage() {
             >
               Se connecter
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -230,9 +230,9 @@ export default function OrderHistoryPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -278,15 +278,15 @@ export default function OrderHistoryPage() {
               </motion.button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Filtres */}
-        <AnimatePresence>
+        <div>
           {showFilters && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+            <div
+              }
+              }
+              }
               className="mb-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -322,19 +322,19 @@ export default function OrderHistoryPage() {
                   </select>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
 
         {/* Liste des commandes */}
         {loading ? (
           <div className="space-y-4">
             {[...Array(3)].map((_, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                }
+                }
+                }
                 className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6"
               >
                 <div className="animate-pulse">
@@ -347,13 +347,13 @@ export default function OrderHistoryPage() {
                     <div className="h-3 bg-gray-200 dark:bg-slate-700 rounded w-3/4"></div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
                     ) : (filteredOrders?.length || 0) === 0 ? (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -376,21 +376,21 @@ export default function OrderHistoryPage() {
                 Découvrir nos plats
               </button>
             )}
-          </motion.div>
+          </div>
         ) : (
           <div className="space-y-4">
-            <AnimatePresence>
+            <div>
                               {(filteredOrders || []).map((order, index) => {
                 const status = getStatusConfig(order.status);
                 const StatusIcon = status.icon;
                 
                 return (
-                  <motion.div
+                  <div
                     key={order.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ delay: index * 0.1 }}
+                    }
+                    }
+                    }
+                    }
                     className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer"
                     onClick={() => setSelectedOrder(order)}
                   >
@@ -439,28 +439,28 @@ export default function OrderHistoryPage() {
                         <span>{order.delivery_address}, {order.delivery_city}</span>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
-            </AnimatePresence>
+            </div>
           </div>
         )}
       </div>
 
       {/* Modal de détails de commande */}
-      <AnimatePresence>
+      <div>
         {selectedOrder && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
+            }
+            }
+            }
             className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
             onClick={() => setSelectedOrder(null)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+            <div
+              }
+              }
+              }
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -599,10 +599,10 @@ export default function OrderHistoryPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 } 

@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion"
+
 import React, { useRef, useState, useEffect } from "react"
 import { ShoppingBag, PlayCircle, ShieldCheck, Clock, Heart, Star } from "lucide-react"
 import { ChefHat, Shield, Truck, ArrowRight, ChevronRight, ChevronLeft } from "lucide-react"
@@ -250,11 +250,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <div 
             className="max-w-4xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInViewHero ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            }
+             : {}}
+            }
           >
             <motion.h1 
               className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
@@ -270,11 +270,11 @@ export default function HomePage() {
               Commandez en ligne auprès de vos restaurants préférés et faites-vous livrer en un rien de temps.
             </motion.p>
             
-            <motion.div 
+            <div 
               className="flex flex-col sm:flex-row gap-4 justify-center"
               variants={fadeInUp}
             >
-              <motion.div
+              <div
                 whileHover={{ 
                   scale: 1.05,
                   y: -5,
@@ -289,15 +289,15 @@ export default function HomePage() {
                                       className="relative bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transform transition-all duration-300"
                 >
                   <motion.span
-                    initial={{ x: 0 }}
+                    }
                     whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    }
                   >
                     Commander maintenant
                   </motion.span>
                 </Button>
-              </motion.div>
-              <motion.div
+              </div>
+              <div
                 whileHover={{ 
                   scale: 1.05,
                   y: -5,
@@ -313,16 +313,16 @@ export default function HomePage() {
                                       className="relative border-2 border-orange-500 dark:border-white text-orange-600 dark:text-white hover:bg-blue-50 dark:hover:bg-white/10 px-8 py-4 text-lg font-medium backdrop-blur-sm transition-all duration-300"
                 >
                   <motion.span
-                    initial={{ x: 0 }}
+                    }
                     whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+                    }
                   >
                     Explorer les restaurants
                   </motion.span>
                 </Button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Vague décorative en bas de l'en-tête */}
@@ -342,25 +342,25 @@ export default function HomePage() {
         className="py-20 relative z-10"
       >
         <div className="container mx-auto px-4">
-          <motion.div 
+          <div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInViewFeatures ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            }
+             : {}}
+            }
           >
             <span className="text-orange-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2 inline-block">Pourquoi nous choisir</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">Une expérience culinaire exceptionnelle</h2>
             <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-          </motion.div>
+          </div>
           
-          <motion.div 
+          <div 
             className="grid md:grid-cols-3 gap-10"
             variants={staggerContainer(0.1)}
             initial="hidden"
-            animate={isInViewFeatures ? "visible" : "hidden"}
+            
           >
             {features.map((feature, index) => (
-              <motion.div 
+              <div 
                 key={index}
                 className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-slate-700 relative overflow-hidden"
                 variants={fadeInUp}
@@ -374,7 +374,7 @@ export default function HomePage() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
               >
-                <motion.div 
+                <div 
                   className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors duration-300"
                   whileHover={{ 
                     scale: 1.1,
@@ -382,23 +382,23 @@ export default function HomePage() {
                     transition: { type: "spring", stiffness: 400, damping: 10 }
                   }}
                 >
-                  <motion.div
+                  <div
                     whileHover={{ 
                       scale: 1.2,
                       transition: { type: "spring", stiffness: 400, damping: 10 }
                     }}
                   >
                     {feature.icon}
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
                 <h3 className="text-xl font-bold text-center mb-3 dark:text-white">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-center">{feature.description}</p>
                 
                 {/* Effet de fond décoratif */}
                 <div className="absolute -z-10 -top-10 -right-10 w-32 h-32 bg-blue-100 dark:bg-blue-900/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -415,17 +415,17 @@ export default function HomePage() {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <div 
             className="flex flex-col md:flex-row justify-between items-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInViewVendors ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            }
+             : {}}
+            }
           >
             <div>
               <span className="text-orange-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2 inline-block">Nos partenaires</span>
               <h2 className="text-3xl md:text-4xl font-bold dark:text-white">Restaurants populaires</h2>
             </div>
-            <motion.div
+            <div
               whileHover={{ x: 5 }}
             >
               <Button 
@@ -434,8 +434,8 @@ export default function HomePage() {
               >
                 Voir tout <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -450,14 +450,14 @@ export default function HomePage() {
               ))}
             </div>
           ) : (
-            <motion.div 
+            <div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={staggerContainer(0.1)}
               initial="hidden"
-              animate={isInViewVendors ? "visible" : "hidden"}
+              
             >
               {featuredVendors.map((vendor, index) => (
-                <motion.div 
+                <div 
                   key={vendor.id}
                   className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
                   variants={fadeInUp}
@@ -471,7 +471,7 @@ export default function HomePage() {
                       src={vendor.cover_image || vendor.logo || getDefaultImage('vendor')} 
                       alt={vendor.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      initial={{ scale: 1 }}
+                      }
                       whileHover={{ scale: 1.1 }}
                     />
                     <div className="absolute top-3 right-3 bg-orange-400 text-orange-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center shadow-md">
@@ -498,9 +498,9 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -517,41 +517,41 @@ export default function HomePage() {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div 
+          <div 
             className="flex flex-col md:flex-row justify-between items-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+            }
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            }
           >
             <div className="text-center md:text-left">
               <motion.span 
                 className="text-orange-600 dark:text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2 inline-block"
-                initial={{ opacity: 0, y: 10 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                }
               >
                 Découvrez
               </motion.span>
               <motion.h2 
                 className="text-3xl md:text-4xl font-bold dark:text-white"
-                initial={{ opacity: 0, y: 10 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
+                }
               >
                 Plats populaires
               </motion.h2>
             </div>
-            <motion.div 
+            <div 
               className="flex space-x-2 mt-4 md:mt-0"
-              initial={{ opacity: 0, x: 20 }}
+              }
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
+              }
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button 
                   variant="outline" 
                   size="icon" 
@@ -559,8 +559,8 @@ export default function HomePage() {
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              </div>
+              <div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button 
                   variant="outline" 
                   size="icon" 
@@ -568,9 +568,9 @@ export default function HomePage() {
                 >
                   <ChevronRight className="h-5 w-5" />
                 </Button>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </div>
+            </div>
+          </div>
           
           {loading ? (
             <div className="flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
@@ -591,7 +591,7 @@ export default function HomePage() {
               </div>
             </div>
           ) : (
-            <motion.div 
+            <div 
               className="relative"
               variants={staggerContainer(0.1)}
               initial="hidden"
@@ -612,10 +612,10 @@ export default function HomePage() {
                 <div className="flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory">
                   <div className="flex space-x-6 md:space-x-8">
                     {popularDishes.map((dish, index) => (
-                      <motion.div 
+                      <div 
                         key={dish.id}
                         className="w-72 flex-shrink-0 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg snap-center relative group"
-                        initial={{ opacity: 0, y: 20 }}
+                        }
                         whileInView={{ 
                           opacity: 1, 
                           y: 0,
@@ -646,9 +646,9 @@ export default function HomePage() {
                             src={dish.image || getDefaultImage('dish')} 
                             alt={dish.name}
                             className="w-full h-full object-cover"
-                            initial={{ scale: 1 }}
+                            }
                             whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+                            }
                           />
                           
                           {/* Bouton favori */}
@@ -695,7 +695,7 @@ export default function HomePage() {
                           </p>
                           
                           <div className="flex justify-between items-center">
-                            <motion.div whileHover={{ x: 5 }}>
+                            <div whileHover={{ x: 5 }}>
                               <Button 
                                 onClick={() => {
                                   if (dish.vendor && dish.vendor.id) {
@@ -712,9 +712,9 @@ export default function HomePage() {
                                 Voir détails
                                 <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                               </Button>
-                            </motion.div>
+                            </div>
                             
-                            <motion.div 
+                            <div 
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}
                             >
@@ -730,7 +730,7 @@ export default function HomePage() {
                                 <ShoppingBag className="h-4 w-4 mr-1.5" />
                                 {isInCart(dish.id) ? 'Ajouté' : 'Ajouter'}
                               </Button>
-                            </motion.div>
+                            </div>
                           </div>
                           
                           {/* Badge de livraison */}
@@ -749,7 +749,7 @@ export default function HomePage() {
                             </span>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -764,7 +764,7 @@ export default function HomePage() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -781,30 +781,30 @@ export default function HomePage() {
           <div className="text-center">
             <motion.h2 
               className="text-4xl md:text-5xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 20 }}
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              }
             >
               Prêt à vous régaler ?
             </motion.h2>
             
             <motion.p 
               className="text-xl text-blue-100 max-w-3xl mx-auto mb-10"
-              initial={{ opacity: 0, y: 20 }}
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              }
             >
               Commandez vos plats préférés en quelques clics et profitez d'une expérience culinaire exceptionnelle directement chez vous.
             </motion.p>
             
-            <motion.div 
+            <div 
               className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 20 }}
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              }
             >
               <motion.button
                 onClick={() => navigate('/plats')}
@@ -824,14 +824,14 @@ export default function HomePage() {
                 <PlayCircle className="mr-2 h-5 w-5" />
                 Voir la démo
               </motion.button>
-            </motion.div>
+            </div>
             
-            <motion.div 
+            <div 
               className="mt-12 flex flex-wrap justify-center gap-6"
-              initial={{ opacity: 0, y: 20 }}
+              }
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              }
             >
               {[
                 { icon: <ShieldCheck className="h-6 w-6 text-emerald-400" />, text: 'Paiement sécurisé' },
@@ -839,17 +839,17 @@ export default function HomePage() {
                 { icon: <Heart className="h-6 w-6 text-pink-400" />, text: '100% satisfait' },
                 { icon: <Star className="h-6 w-6 text-orange-400" />, text: '+10 000 avis' },
               ].map((item, index) => (
-                <motion.div 
+                <div 
                   key={index}
                   className="flex items-center space-x-2 text-blue-100"
                   whileHover={{ y: -3 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                  }
                 >
                   {item.icon}
                   <span>{item.text}</span>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
           
           {/* Témoignages flottants */}
@@ -860,7 +860,7 @@ export default function HomePage() {
               { id: 3, text: 'Livraison rapide', bottom: '25%', left: '15%', rotate: -2 },
               { id: 4, text: 'Je recommande', bottom: '15%', right: '10%', rotate: 4 },
             ].map((testimonial) => (
-              <motion.div
+              <div
                 key={testimonial.id}
                 className={`absolute bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg`}
                 style={{
@@ -870,7 +870,7 @@ export default function HomePage() {
                   bottom: testimonial.bottom,
                   rotate: `${testimonial.rotate}deg`
                 }}
-                initial={{ scale: 0, opacity: 0 }}
+                }
                 whileInView={{ 
                   scale: 1, 
                   opacity: 1,
@@ -891,7 +891,7 @@ export default function HomePage() {
                 {testimonial.text} {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="inline-block h-3 w-3 text-orange-400 fill-current ml-0.5" />
                 ))}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -899,3 +899,4 @@ export default function HomePage() {
     </div>
   )
 }
+

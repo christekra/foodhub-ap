@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { useParams, Link } from 'react-router-dom';
 import { 
   Star, 
@@ -337,10 +337,10 @@ export default function VendorProfilePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+              <div
+                }
+                }
+                }
               >
                 <div className="flex items-center space-x-2 mb-4">
                   {mockVendor.isVerified && (
@@ -366,13 +366,13 @@ export default function VendorProfilePage() {
                     <span>{mockVendor.city}</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
+                }
+                }
+                }
                 className="relative"
               >
                 <img
@@ -385,7 +385,7 @@ export default function VendorProfilePage() {
                 }`}>
                   {mockVendor.isOpen ? 'O' : 'F'}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -395,10 +395,10 @@ export default function VendorProfilePage() {
       <div className="bg-white dark:bg-gray-800 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <div
+              }
+              }
+              }
               className="flex items-center space-x-3"
             >
               <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
@@ -408,12 +408,12 @@ export default function VendorProfilePage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Livraison</p>
                 <p className="font-semibold">{mockVendor.deliveryFee} FCFA</p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              }
+              }
+              }
               className="flex items-center space-x-3"
             >
               <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
@@ -423,12 +423,12 @@ export default function VendorProfilePage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Temps de livraison</p>
                 <p className="font-semibold">{mockVendor.deliveryTime} min</p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+            <div
+              }
+              }
+              }
               className="flex items-center space-x-3"
             >
               <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
@@ -438,12 +438,12 @@ export default function VendorProfilePage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Commande minimum</p>
                 <p className="font-semibold">{mockVendor.minimumOrder} FCFA</p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
+              }
+              }
+              }
               className="flex items-center space-x-3"
             >
               <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
@@ -453,7 +453,7 @@ export default function VendorProfilePage() {
                 <p className="text-sm text-gray-600 dark:text-gray-400">Commandes</p>
                 <p className="font-semibold">{mockVendor.totalOrders.toLocaleString()}</p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -482,13 +482,13 @@ export default function VendorProfilePage() {
             </button>
           </div>
 
-          <AnimatePresence>
+          <div>
             {showFilters && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+              <div
+                }
+                }
+                }
+                }
                 className="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -521,19 +521,19 @@ export default function VendorProfilePage() {
                     </select>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          </div>
         </div>
 
         {/* Dishes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredDishes.map((dish, index) => (
-            <motion.div
+            <div
               key={dish.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              }
+              }
+              }
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
             >
               <div className="relative">
@@ -633,14 +633,14 @@ export default function VendorProfilePage() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {filteredDishes.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <div
+            }
+            }
             className="text-center py-12"
           >
             <div className="text-gray-500 dark:text-gray-400">
@@ -648,15 +648,15 @@ export default function VendorProfilePage() {
               <h3 className="text-lg font-medium mb-2">Aucun plat trouvé</h3>
               <p>Essayez de modifier vos critères de recherche</p>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Floating Cart Button */}
       {cartItemCount > 0 && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+        <div
+          }
+          }
           className="fixed bottom-6 right-6 z-50"
         >
           <Link
@@ -667,24 +667,24 @@ export default function VendorProfilePage() {
             <span className="font-semibold">Panier ({cartItemCount})</span>
             <span className="font-bold">{cartTotal} FCFA</span>
           </Link>
-        </motion.div>
+        </div>
       )}
 
       {/* Dish Detail Modal */}
-      <AnimatePresence>
+      <div>
         {selectedDish && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
+            }
+            }
+            }
             className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
             onClick={closeDishModal}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 50 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 50 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            <div
+              }
+              }
+              }
+              }
               className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -796,10 +796,10 @@ export default function VendorProfilePage() {
                   {selectedDish.available ? 'Ajouter au panier' : 'Indisponible'}
                 </button>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 } 

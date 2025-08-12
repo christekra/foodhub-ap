@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { useNavigate } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -16,7 +16,7 @@ import {
 import { useAuth } from '../contexts/AuthContext';
 import apiService from '../services/api';
 import toast from 'react-hot-toast';
-import { AnimatePresence } from 'framer-motion';
+
 
 interface Category {
   id: number;
@@ -131,9 +131,9 @@ export default function VendorAddDishPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -151,7 +151,7 @@ export default function VendorAddDishPage() {
             >
               Se connecter
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -161,9 +161,9 @@ export default function VendorAddDishPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <div className="w-24 h-24 bg-gray-100 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -181,7 +181,7 @@ export default function VendorAddDishPage() {
             >
               Retour à l'accueil
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -390,9 +390,9 @@ export default function VendorAddDishPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-4xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -413,13 +413,13 @@ export default function VendorAddDishPage() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Formulaire */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+        <div
+          }
+          }
+          }
           className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg"
         >
           {/* Onglets */}
@@ -457,13 +457,13 @@ export default function VendorAddDishPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="p-6">
-            <AnimatePresence mode="wait">
+            <div mode="wait">
               {activeTab === 'basic' && (
-                <motion.div
+                <div
                   key="basic"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  }
+                  }
+                  }
                   className="space-y-6"
                 >
                   {/* Image */}
@@ -647,15 +647,15 @@ export default function VendorAddDishPage() {
                       </label>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {activeTab === 'details' && (
-                <motion.div
+                <div
                   key="details"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  }
+                  }
+                  }
                   className="space-y-6"
                 >
                   {/* Temps de préparation */}
@@ -733,15 +733,15 @@ export default function VendorAddDishPage() {
                       Séparez chaque ingrédient par une virgule
                     </p>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {activeTab === 'nutrition' && (
-                <motion.div
+                <div
                   key="nutrition"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  }
+                  }
+                  }
                   className="space-y-6"
                 >
                   {/* Informations nutritionnelles */}
@@ -880,9 +880,9 @@ export default function VendorAddDishPage() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
+            </div>
 
             {/* Boutons de navigation */}
             <div className="flex items-center justify-between pt-6 border-t border-gray-200 dark:border-slate-700">
@@ -926,7 +926,7 @@ export default function VendorAddDishPage() {
               </div>
             </div>
           </form>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

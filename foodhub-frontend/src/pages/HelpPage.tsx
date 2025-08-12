@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { useNavigate } from 'react-router-dom';
 import { 
   Search, 
@@ -176,10 +176,10 @@ const HelpPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            }
+            }
+            }
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -205,7 +205,7 @@ const HelpPage: React.FC = () => {
                 />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -213,10 +213,10 @@ const HelpPage: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            <div
+              }
+              }
+              }
               className="text-center p-6 bg-gradient-to-br from-orange-50 to-green-50 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <Phone className="w-12 h-12 text-orange-500 mx-auto mb-4" />
@@ -225,12 +225,12 @@ const HelpPage: React.FC = () => {
               <button className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors">
                 Appeler maintenant
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              }
+              }
+              }
               className="text-center p-6 bg-gradient-to-br from-orange-50 to-green-50 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <MessageCircle className="w-12 h-12 text-orange-500 mx-auto mb-4" />
@@ -242,12 +242,12 @@ const HelpPage: React.FC = () => {
               >
                 Démarrer le chat
               </button>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+            <div
+              }
+              }
+              }
               className="text-center p-6 bg-gradient-to-br from-orange-50 to-green-50 rounded-xl hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <Mail className="w-12 h-12 text-orange-500 mx-auto mb-4" />
@@ -256,7 +256,7 @@ const HelpPage: React.FC = () => {
               <button className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition-colors">
                 Envoyer un email
               </button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -264,10 +264,10 @@ const HelpPage: React.FC = () => {
       {/* Categories and FAQ */}
       <section className="py-20 bg-gradient-to-r from-orange-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -276,16 +276,16 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-600">
               Sélectionnez une catégorie pour trouver rapidement votre réponse.
             </p>
-          </motion.div>
+          </div>
 
           {/* Category Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category, index) => (
               <motion.button
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeCategory === category.id
@@ -301,21 +301,21 @@ const HelpPage: React.FC = () => {
 
           {/* FAQ List */}
           <div className="max-w-4xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
+            <div mode="wait">
+              <div
                 key={activeCategory}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                }
+                }
+                }
+                }
                 className="space-y-4"
               >
                 {filteredFaqs.map((faq, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    }
+                    }
+                    }
                     className="bg-white rounded-xl shadow-lg overflow-hidden"
                   >
                     <button
@@ -331,25 +331,25 @@ const HelpPage: React.FC = () => {
                         <ChevronDown className="w-5 h-5 text-orange-500 flex-shrink-0" />
                       )}
                     </button>
-                    <AnimatePresence>
+                    <div>
                       {expandedFaq === index && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3 }}
+                        <div
+                          }
+                          }
+                          }
+                          }
                           className="px-6 pb-4"
                         >
                           <p className="text-gray-600 leading-relaxed">
                             {faq.answer}
                           </p>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </motion.div>
+                    </div>
+                  </div>
                 ))}
-              </motion.div>
-            </AnimatePresence>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -357,10 +357,10 @@ const HelpPage: React.FC = () => {
       {/* Guides Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -369,15 +369,15 @@ const HelpPage: React.FC = () => {
             <p className="text-xl text-gray-600">
               Apprenez à utiliser FoodHub comme un pro avec nos guides détaillés.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {guides.map((guide, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                }
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                }
                 className="bg-gradient-to-br from-orange-50 to-green-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -401,7 +401,7 @@ const HelpPage: React.FC = () => {
                     Lire le guide →
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -410,10 +410,10 @@ const HelpPage: React.FC = () => {
       {/* Contact Support */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <div
+            }
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            }
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Besoin d'aide supplémentaire ?
@@ -440,7 +440,7 @@ const HelpPage: React.FC = () => {
                 Chat en ligne
               </motion.button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -448,3 +448,4 @@ const HelpPage: React.FC = () => {
 };
 
 export default HelpPage;
+

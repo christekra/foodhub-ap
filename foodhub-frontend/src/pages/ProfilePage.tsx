@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { 
@@ -82,9 +82,9 @@ export default function ProfilePage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-4xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8"
         >
           <div className="flex items-center justify-between mb-6">
@@ -151,14 +151,14 @@ export default function ProfilePage() {
               </motion.button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Informations personnelles */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
+          <div 
+            }
+            }
+            }
             className="lg:col-span-2"
           >
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
@@ -260,13 +260,13 @@ export default function ProfilePage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Statistiques et actions rapides */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+          <div 
+            }
+            }
+            }
             className="space-y-6"
           >
             {/* Statistiques */}
@@ -351,7 +351,7 @@ export default function ProfilePage() {
                 </motion.button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

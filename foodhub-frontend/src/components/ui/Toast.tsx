@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { X, CheckCircle, AlertCircle, Info, XCircle } from 'lucide-react';
 
 export interface ToastProps {
@@ -94,9 +94,9 @@ export const Toast: React.FC<ToastProps> = ({
   };
 
   return (
-    <AnimatePresence>
+    <div>
       {isVisible && (
-        <motion.div
+        <div
           variants={toastVariants}
           initial="initial"
           animate="animate"
@@ -127,16 +127,16 @@ export const Toast: React.FC<ToastProps> = ({
           
           {/* Barre de progression */}
           {duration > 0 && (
-            <motion.div
+            <div
               className="absolute bottom-0 left-0 h-1 bg-current opacity-30 rounded-b-lg"
-              initial={{ width: '100%' }}
-              animate={{ width: '0%' }}
-              transition={{ duration: duration / 1000, ease: 'linear' }}
+              }
+              }
+              }
             />
           )}
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 };
 

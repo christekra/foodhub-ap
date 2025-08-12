@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { 
   Search, 
   MapPin, 
@@ -335,12 +335,12 @@ export default function VendorsPage() {
           </div>
 
           {/* Filtres avancés */}
-          <AnimatePresence>
+          <div>
             {showFilters && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+              <div
+                }
+                }
+                }
                 className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -393,9 +393,9 @@ export default function VendorsPage() {
                     </select>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
+          </div>
         </div>
       </div>
 
@@ -481,12 +481,12 @@ export default function VendorsPage() {
         </div>
 
         {/* Carte interactive */}
-        <AnimatePresence>
+        <div>
           {showMap && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+            <div
+              }
+              }
+              }
               className="mb-8 overflow-hidden"
             >
               <InteractiveMap
@@ -523,20 +523,20 @@ export default function VendorsPage() {
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
+        </div>
 
         {/* Grille des vendeurs */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
+          <div>
             {filteredVendors.map((vendor, index) => (
-              <motion.div
+              <div
                 key={vendor.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ delay: index * 0.1 }}
+                }
+                }
+                }
+                }
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
                 whileHover={{ y: -5 }}
                 onClick={() => openVendorModal(vendor)}
@@ -650,16 +650,16 @@ export default function VendorsPage() {
                     </motion.button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
+          </div>
         </div>
 
         {/* Message si aucun résultat */}
         {filteredVendors.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+          <div
+            }
+            }
             className="text-center py-12"
           >
             <div className="text-gray-400 dark:text-gray-600 text-6xl mb-4">🏪</div>
@@ -669,24 +669,24 @@ export default function VendorsPage() {
             <p className="text-gray-600 dark:text-gray-400">
               Essayez de modifier vos critères de recherche
             </p>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Modal détaillé du vendeur */}
-      <AnimatePresence>
+      <div>
         {selectedVendor && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
+            }
+            }
+            }
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
             onClick={closeVendorModal}
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+            <div
+              }
+              }
+              }
               className="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -831,10 +831,10 @@ export default function VendorsPage() {
                   </motion.button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 } 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { Package, Users, Store, DollarSign, Clock, RefreshCw, Eye, MapPin, Phone } from 'lucide-react';
 import apiService from '../../services/api';
 import toast from 'react-hot-toast';
@@ -144,10 +144,10 @@ export default function OrdersTab({ onRefresh }: Props) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {orders.map((order) => (
-            <motion.div
+            <div
               key={order.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              }
+              }
               className="bg-gray-50 dark:bg-slate-700 rounded-xl p-6"
             >
               <div className="flex items-center justify-between mb-4">
@@ -192,7 +192,7 @@ export default function OrdersTab({ onRefresh }: Props) {
                 <Eye className="w-4 h-4" />
                 <span>Voir les détails</span>
               </button>
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

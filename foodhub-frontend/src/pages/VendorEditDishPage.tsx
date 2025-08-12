@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { useNavigate, useParams } from 'react-router-dom';
 import { 
   ArrowLeft, 
@@ -198,9 +198,9 @@ export default function VendorEditDishPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -215,7 +215,7 @@ export default function VendorEditDishPage() {
             >
               Se connecter
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -225,9 +225,9 @@ export default function VendorEditDishPage() {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div 
+            }
+            }
             className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8 text-center"
           >
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -242,7 +242,7 @@ export default function VendorEditDishPage() {
             >
               Retour à l'accueil
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     );
@@ -271,9 +271,9 @@ export default function VendorEditDishPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-slate-900 py-8">
       <div className="max-w-4xl mx-auto px-4">
         {/* En-tête */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
+          }
+          }
           className="mb-8"
         >
           <div className="flex items-center justify-between">
@@ -305,13 +305,13 @@ export default function VendorEditDishPage() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Formulaire */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+        <div
+          }
+          }
+          }
           className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg"
         >
           <form onSubmit={handleSubmit}>
@@ -618,7 +618,7 @@ export default function VendorEditDishPage() {
               </button>
             </div>
           </form>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

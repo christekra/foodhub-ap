@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import { motion, AnimatePresence } from "framer-motion"
+
 import { Menu, X, ShoppingCart, User, LogIn, LogOut, UserPlus, Camera, Home, Utensils, Store, Info, Heart, Bell, Settings, HelpCircle, Phone } from "lucide-react"
 import { ThemeToggle } from "./theme"
 import { useAuth } from "../contexts/AuthContext"
@@ -93,8 +93,8 @@ export default function Navbar() {
           {/* Logo animé FoodHub */}
           <Link to="/" className="flex items-center space-x-3 group">
             {/* Icône animée */}
-            <motion.div
-              initial={{ scale: 1 }}
+            <div
+              }
               whileHover={{ scale: 1.1, rotate: 5 }}
               className="relative"
             >
@@ -115,7 +115,7 @@ export default function Navbar() {
                 </motion.span>
               </div>
               {/* Effet de brillance */}
-              <motion.div
+              <div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent rounded-xl"
                 animate={{
                   x: [-20, 20, -20]
@@ -126,37 +126,37 @@ export default function Navbar() {
                   ease: "easeInOut"
                 }}
               />
-            </motion.div>
+            </div>
             
             {/* Texte du logo */}
             <div className="flex flex-col">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+              <div
+                }
+                }
+                }
                 className="flex items-center space-x-1"
               >
                 <motion.span
                                      className="text-2xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
+                  }
                 >
                   Food
                 </motion.span>
                 <motion.span
                   className="text-2xl font-bold text-gray-800 dark:text-white"
                   whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
+                  }
                 >
                   Hub
                 </motion.span>
-              </motion.div>
+              </div>
               
               {/* Badge CI animé */}
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+              <div
+                }
+                }
+                }
                 className="flex items-center space-x-1"
               >
                 <motion.span
@@ -179,12 +179,12 @@ export default function Navbar() {
                 </motion.span>
                 <motion.span
                   className="text-xs text-gray-500 dark:text-gray-400 font-medium"
-                  animate={{ opacity: [0.7, 1, 0.7] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                  }
+                  }
                 >
                   • Livraison rapide
                 </motion.span>
-              </motion.div>
+              </div>
             </div>
           </Link>
 
@@ -382,14 +382,14 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
+      <div>
         {isMenuOpen && (
-          <motion.div 
+          <div 
             className="md:hidden bg-white dark:bg-slate-900 shadow-lg"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            }
+            }
+            }
+            }
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
@@ -502,9 +502,10 @@ export default function Navbar() {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </header>
   )
 }
+
